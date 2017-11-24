@@ -13,17 +13,14 @@
 
 .App-header {
   background-color: #222;
-  height: 120px;
-  padding: 20px;
+  flex: 0 0 120px;
+  padding: 10px;
   color: white;
 }
 
 .App-title {
   font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
+  margin: 0;
 }
 
 .App-iframe {
@@ -56,4 +53,19 @@
 .App-tab.active {
   background: lightblue;
   font-weight: bold;
+}
+
+@media only screen and (max-device-height: 700px) {
+  .App-header {
+    flex: 0 0 12px;
+    padding: 0;
+  }
+
+  .App-title {
+    font-size: 1em;
+  }
+
+  .App-logo {
+    display: none;
+  }
 }
