@@ -11,6 +11,18 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "format": "prettier --print-width 100 --single-quote --trailing-comma es5 --jsx-bracket-same-line --write src/**/*.{js,css,json}",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^5.0.0",
+    "prettier": "^1.8.2"
+  },
+  "lint-staged": {
+    "src/**/*.{js,css,json}": [
+      "prettier --print-width 100 --single-quote --trailing-comma es5 --jsx-bracket-same-line --write",
+      "git add"
+    ]
   }
 }
