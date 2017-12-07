@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 
 import map from './Map.png';
+import './Map.css';
 
 class Map extends Component {
   render() {
     const { isHidden, zoom, onWheel } = this.props;
     return (
       <div
-        className="App-map"
+        className="Map"
         onWheel={onWheel}
         ref={ref => (this.divElement = ref)}
         onDragStart={this.onDragStart}
@@ -18,7 +19,7 @@ class Map extends Component {
             width: `${zoom}%`,
             height: `${zoom}%`,
           }}
-          className="App-map-img"
+          className="Map-img"
           src={map}
           alt="Map of Corevita"
           hidden={isHidden}

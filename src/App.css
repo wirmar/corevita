@@ -23,20 +23,6 @@
   margin: 0;
 }
 
-.App-iframe {
-  border: none;
-  flex: 1 1 auto;
-}
-
-.App-map {
-  max-width: 100%;
-  overflow: auto;
-}
-
-.App-zoom {
-  margin-top: 10px;
-}
-
 .App-tabs {
   display: flex;
   flex: 0 0 auto;

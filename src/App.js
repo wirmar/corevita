@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 import logo from './logo.svg';
 import './App.css';
-import Corevita from './Corevita';
-import Map from './Map';
-import MapZoom from './MapZoom';
+import Corevita from './Corevita/Corevita';
+import Map from './Map/Map';
+import MapZoom from './Map/MapZoom';
 
 const tabs = {
   COREVITA: 'corevita',

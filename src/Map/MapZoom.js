@@ -1,8 +1,10 @@
 import React from 'react';
 
+import './MapZoom.css';
+
 const MapZoom = ({ onChange, zoom, isHidden, min, max }) => (
   <input
-    className="App-zoom"
+    className="MapZoom"
     value={zoom}
     min={min}
     max={max}
