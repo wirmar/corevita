@@ -1,0 +1,35 @@
+.Dice {
+  display: flex;
+  flex-direction: column;
+}
+
+.Dice-form {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Dice-number-input {
+  width: 80px;
+  margin: 0 10px;
+}
+
+.Dice-button {
+  margin-right: 10px;
+}
+
+.Dice-results {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 100%;
+}
+
+.Dice-result {
+  margin: 5px 0;
+  color: #5e5e5e;
+}
+
+.Dice-result.latest {
+  color: black;
+  font-weight: bold;
+}

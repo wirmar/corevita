@@ -5,10 +5,12 @@ import './App.css';
 import Corevita from './Corevita/Corevita';
 import Map from './Map/Map';
 import MapZoom from './Map/MapZoom';
+import Dice from './Dice/Dice';
 
 const tabs = {
   COREVITA: 'corevita',
   MAP: 'map',
+  DICE: 'dice',
 };
 
 const minZoom = 100;
@@ -16,7 +18,7 @@ const maxZoom = 400;
 
 class App extends Component {
   state = {
-    tab: tabs.COREVITA,
+    tab: tabs.DICE,
     mapZoom: 100,
   };
 
@@ -31,17 +33,24 @@ class App extends Component {
         <div className="App-tabs">
           <button
             className={`App-tab${tab === tabs.COREVITA ? ' active' : ''}`}
-            name="corevita"
+            name={tabs.COREVITA}
             type="button"
             onClick={this.onTabChange}>
             Corevita
           </button>
           <button
             className={`App-tab${tab === tabs.MAP ? ' active' : ''}`}
-            name="map"
+            name={tabs.MAP}
             type="button"
             onClick={this.onTabChange}>
             Map
+          </button>
+          <button
+            className={`App-tab${tab === tabs.DICE ? ' active' : ''}`}
+            name={tabs.DICE}
+            type="button"
+            onClick={this.onTabChange}>
+            Dice
           </button>
         </div>
         <Corevita isHidden={tab !== tabs.COREVITA} />
@@ -53,6 +62,7 @@ class App extends Component {
           min={minZoom}
           max={maxZoom}
         />
+        <Dice isHidden={tab !== tabs.DICE} />
       </div>
     );
   }
