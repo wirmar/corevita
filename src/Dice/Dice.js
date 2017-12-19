@@ -12,8 +12,12 @@ class Dice extends Component {
   };
 
   render() {
+    const style = {};
+    if (this.props.isHidden) {
+      style.display = 'none';
+    }
     return (
-      <div hidden={this.props.isHidden} className="Dice">
+      <div style={style} className="Dice">
         <form onSubmit={this.onSubmit} className="Dice-form">
           <input
             type="number"

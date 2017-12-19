@@ -77,9 +77,9 @@ class App extends Component {
 
   onWheelZoom = event => {
     event.preventDefault();
-    const { deltaX } = event;
+    const { deltaY } = event;
     this.setState(state => {
-      let zoom = state.mapZoom + deltaX;
+      let zoom = state.mapZoom - deltaY;
       if (zoom < minZoom) {
         zoom = minZoom;
       } else if (zoom > maxZoom) {
