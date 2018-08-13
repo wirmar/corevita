@@ -63,7 +63,7 @@ class Dice extends Component {
   renderResults = () =>
     this.state.results.map((result, i) => (
       <div key={i} className={`Dice-result${i === this.state.results.length - 1 ? ' latest' : ''}`}>
-        {result.dice}: {result.result}
+        {result.dice}: {result.result} ({result.avg} average)
       </div>
     ));
 
@@ -80,12 +80,14 @@ class Dice extends Component {
     event.preventDefault();
     const dice = `${count}${dieType} + ${modifier}`;
     const result = rollDice(parseInt(count, 10), dieType, parseInt(modifier, 10));
+    const avg = (count * (dieTypes[dieType] + 1) + modifier * 2) / 2;
     this.setState(state => ({
       results: [
         ...state.results,
         {
           dice,
           result,
+          avg,
         },
       ],
     }));
